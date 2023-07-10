@@ -34,7 +34,7 @@ const Signup = () => {
         try {
 
 
-            const response = await fetch(`http://localhost:3005/user/signup`, {
+            const response = await fetch(`https://password-reset-task01.onrender.com/user/signup`, {
                 method: "POST",
                 body: JSON.stringify(signup),
                 headers: {
