@@ -34,7 +34,7 @@ const Signup = () => {
         try {
 
 
-            const response = await fetch(`https://reset-password-backend-e0rg.onrender.com/user/signup`, {
+            const response = await fetch(`http://localhost:3005/user/signup`, {
                 method: "POST",
                 body: JSON.stringify(signup),
                 headers: {
