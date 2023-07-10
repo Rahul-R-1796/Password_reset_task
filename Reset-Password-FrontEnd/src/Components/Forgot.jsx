@@ -76,7 +76,7 @@ const Emailverification = ({ setUserId,setIdx,setVerifyEmail, setEmailverified, 
         try {
 
 
-            const response = await fetch("https://reset-password-backend-day-43.vercel.app/forgot", {
+            const response = await fetch("https://reset-password-backend-e0rg.onrender.com/forgot", {
                 method: "POST",
                 body: JSON.stringify(email),
                 headers: {
@@ -148,7 +148,7 @@ const OtpVerification = ({ idx,setIdx,setVerifyEmail, setEmailverified, setOtpVe
         try {
 
 
-            const response = await fetch(`https://reset-password-backend-day-43.vercel.app/verifyotp/${idx}`, {
+            const response = await fetch(`https://reset-password-backend-e0rg.onrender.com/verifyotp/${idx}`, {
                 method: "POST",
                 body: JSON.stringify(otp),
                 headers: {
@@ -213,7 +213,7 @@ const ResetPaasword = ({ userId,setVerifyEmail, setEmailverified, setOtpVerified
         try {
 
 
-            const response = await fetch(`https://reset-password-backend-day-43.vercel.app/forgot/reset/${userId}`, {
+            const response = await fetch(`https://reset-password-backend-e0rg.onrender.com/forgot/reset/${userId}`, {
                 method: "PUT",
                 body: JSON.stringify(password),
                 headers: {
