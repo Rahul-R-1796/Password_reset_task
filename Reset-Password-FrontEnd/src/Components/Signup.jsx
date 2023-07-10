@@ -34,7 +34,7 @@ const Signup = () => {
         try {
 
 
-            const response = await fetch(`https://reset-password-backend-day-43.vercel.app/user/signup`, {
+            const response = await fetch(`https://reset-password-backend-e0rg.onrender.com/user/signup`, {
                 method: "POST",
                 body: JSON.stringify(signup),
                 headers: {
