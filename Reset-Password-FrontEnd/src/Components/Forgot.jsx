@@ -76,7 +76,7 @@ const Emailverification = ({ setUserId,setIdx,setVerifyEmail, setEmailverified, 
         try {
 
 
-            const response = await fetch("https://reset-password-backend-e0rg.onrender.com/forgot", {
+            const response = await fetch("https://password-reset-task01.onrender.com/forgot", {
                 method: "POST",
                 body: JSON.stringify(email),
                 headers: {
@@ -148,7 +148,7 @@ const OtpVerification = ({ idx,setIdx,setVerifyEmail, setEmailverified, setOtpVe
         try {
 
 
-            const response = await fetch(`http://localhost:3005/verifyotp/${idx}`, {
+            const response = await fetch(`https://password-reset-task01.onrender.com/verifyotp/${idx}`, {
                 method: "POST",
                 body: JSON.stringify(otp),
                 headers: {
@@ -213,7 +213,7 @@ const ResetPaasword = ({ userId,setVerifyEmail, setEmailverified, setOtpVerified
         try {
 
 
-            const response = await fetch(`http://localhost:3005/forgot/reset/${userId}`, {
+            const response = await fetch(`https://password-reset-task01.onrender.com/forgot/reset/${userId}`, {
                 method: "PUT",
                 body: JSON.stringify(password),
                 headers: {
