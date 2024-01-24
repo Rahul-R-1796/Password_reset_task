@@ -1,39 +1,31 @@
-import nodemailer from 'nodemailer'
 
+import nodemailer from 'nodemailer';
 
-const mail = (randomOTP,Useremail) => {
-    const transporter = nodemailer.createTransport({
-        host: "my.smtp.host",
-        port:"465",
+const transporter = 
+    nodemailer.createTransport({
+      service:'gmail',
         auth: {
-            user: "demo28052002@gmail.com",
-            pass: "sahul@123"
-        },
-        tls:{
-            rejectUnauthorized:true
-        }
-    
-    })
-    
-    const messagesubject = "Reset Your Password"
-    const mailtext = `Your OTP - ${randomOTP}`
-    
-    const info = {
-    from:"pottersamplemail@gmail.com",
-    to:Useremail,
-    subject:messagesubject,
-    text:mailtext
+  
+    user: "pottersamplemail@gmail.com",
+    pass: "blxb tjxu etql uspx",
+  },
+});
+
+const mail = (otp, recipientEmail) => {
+  const mailOptions = {
+    from: "pottersamplemail@gmail.com",
+    to: recipientEmail,
+    subject: 'Password Reset OTP',
+    text: `Your OTP is: ${otp}`,
+  };
+
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      console.error('Mail error', error);
+    } else {
+      console.log('Email sent:', info.response);
     }
-    
-    transporter.sendMail(info,(err)=>{
-    if(err){
-        console.log("mail error ",err)
-    }else{
-        console.log("email has sent")
-    }
-    })
-}
+  });
+};
 
 export default mail;
-
-
