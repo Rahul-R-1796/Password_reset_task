@@ -3,11 +3,11 @@ import nodemailer from 'nodemailer'
 
 const mail = (randomOTP,Useremail) => {
     const transporter = nodemailer.createTransport({
-        host: "my.smtp.host",
-        port:"465",
+        host: "https://password-reset-task01.onrender.com",
+        port:"https://password-reset-task01.onrender.com",
         auth: {
-            user:"rahulrajenderan96",
-            pass:"1234"
+            user:"pottersamplemail@gmail.com",
+            pass:"Rahul@123"
         },
         tls:{
             rejectUnauthorized:true
@@ -19,7 +19,7 @@ const mail = (randomOTP,Useremail) => {
     const mailtext = `Your OTP - ${randomOTP}`
     
     const info = {
-    from:"rahulrajenderan96@gmail.com",
+    from:"pottersamplemail@gmail.com",
     to:Useremail,
     subject:messagesubject,
     text:mailtext
