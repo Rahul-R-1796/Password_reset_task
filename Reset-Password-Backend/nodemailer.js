@@ -6,8 +6,8 @@ const mail = (randomOTP,Useremail) => {
         host: "my.smtp.host",
         port:"465",
         auth: {
-            user: "pottersamplemail@gmail.com",
-            pass: "Rahul@123"
+            user: "demo28052002@gmail.com",
+            pass: "sahul@123"
         },
         tls:{
             rejectUnauthorized:true
