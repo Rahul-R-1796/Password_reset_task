@@ -5,6 +5,7 @@ const mail = (randomOTP, Useremail) => {
         host: "smtp.example.com", // Replace with the actual SMTP server host
         port: 587, // Replace with the actual port
         secure: false, // use TLS
+        service: 'gmail',
         auth: {
             user: "pottersamplemail@gmail.com",
             pass: "Rahul@123"
