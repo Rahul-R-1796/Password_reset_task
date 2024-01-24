@@ -2,9 +2,6 @@ import nodemailer from 'nodemailer';
 
 const mail = (randomOTP, Useremail) => {
     const transporter = nodemailer.createTransport({
-        host: "smtp.example.com", // Replace with the actual SMTP server host
-        port: 587, // Replace with the actual port
-        secure: false, // use TLS
         service: 'gmail',
         auth: {
             user: "pottersamplemail@gmail.com",
@@ -22,11 +19,11 @@ const mail = (randomOTP, Useremail) => {
         text: mailtext
     };
 
-    transporter.sendMail(info, (err) => {
+    transporter.sendMail(info, (err, info) => {
         if (err) {
             console.log("Mail error: ", err);
         } else {
-            console.log("Email has been sent");
+            console.log("Email has been sent: ", info.response);
         }
     });
 };
